@@ -22,7 +22,7 @@ router.post('/login', middleware.LoginValidation, async(req,res) => {
 const response = await controller.Login({username: req.body.username, password: req.body.password})
 if (response.code === 200) {
     res.cookie('jwt', response.data.token, {maxAge:60 * 60 * 3000})
-    res.redirect('/tasks')
+    res.redirect('/blogs')
 }
 })
 

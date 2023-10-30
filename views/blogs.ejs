@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <style>
+        .auth-buttons {
+  margin-top: 50px;
+}
+
+.auth-button {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: #333;">Blog Listing</h1>
+    <p>Here is a list of all published blogs</p>
+<ul style="list-style: none; padding: 0;">
+  <% blogs.forEach(blog => { %>
+    <li style="margin: 10px 0;">
+      <a href="/blogs/<%= blog._id %>" style="text-decoration: none; color: #007bff;"><%= blog.title %></a>
+    </li>
+  <% }); %>
+</ul>
+<div class="auth-buttons">
+    <a href="/login" class="auth-button">Log In</a>
+    <a href="/signup" class="auth-button">Sign Up</a>
+  </div>
+
+</body>
+</html>

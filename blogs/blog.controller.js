@@ -39,11 +39,19 @@ const getAllPublishedBlogs = async (req, res) => {
         .sort(sort)
         .skip((page - 1) * limit)
         .limit(Number(limit));
+        
   
       logger.info(`List of published blogs requested with parameters: ${JSON.stringify(req.query)}`);
       logger.info(`Response: ${JSON.stringify(blogs)}`);
   
-      return res.status(200).json(blogs);
+      return {
+        code: 200,
+        success: true,
+        message: 'Blogs fetched successfully',
+        data: {
+            blogs
+        }
+    }
     } catch (error) {
       logger.error(`Error in fetching list of published blogs: ${error.message}`);
       res.status(500).json({ message: 'An error occurred while fetching published blogs' });

@@ -1,6 +1,7 @@
 const express = require('express');
 const userRouter = require('./users/user.router')
 const blogRouter = require('./blogs/blog.router')
+const viewRouter = require('./views/views.router')
 require('dotenv').config();
 const PORT = process.env.PORT
 const db = require('./db');
@@ -11,9 +12,11 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true })); 
 db.connect();
 
-
+app.set('view engine', 'ejs')
+app.set("views", "views");
+app.use('/views', viewRouter)
 app.use('/users', userRouter)
-app.use('/blogs', blogRouter)
+app.use('/', blogRouter)
 
 
 
