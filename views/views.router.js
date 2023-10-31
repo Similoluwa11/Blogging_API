@@ -21,4 +21,8 @@ router.post('/logout', (req, res) => {
     res.clearCookie('jwt')
     res.render('home')
 });
+router.get('/create-blog', (req, res) => {
+    res.render('create-blog', 
+    { user: res.locals.user });
+})
 module.exports = router

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Blogs</title>
+    <style>
+        h1 {
+          text-align: center;
+          color: #333;
+        }
+      
+        label {
+          font-weight: bold;
+          color: #555;
+        }
+      
+        select {
+          padding: 5px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+        }
+      
+        ul {
+          list-style: none;
+          padding: 0;
+        }
+      
+        li {
+          margin: 10px 0;
+        }
+      
+        button {
+          padding: 8px 16px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-right: 10px;
+        }
+      
+        .pagination {
+          margin-top: 20px;
+          text-align: center;
+        }
+        .create-button {
+    display: block;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+      </style>
+</head>
+<body>
+    <h1>Your Blogs</h1>
+
+<label for="filterState">Filter by State:</label>
+<select id="filterState" name="filterState">
+  <option value="all">All</option>
+  <option value="draft">Draft</option>
+  <option value="published">Published</option>
+</select>
+<a href="/create-blog" class="create-button">Create a Blog</a>
+<ul>
+  <% userBlogs.forEach(blog => { %>
+    <li>
+      <h2><%= blog.title %></h2>
+      <p>State: <%= blog.state %></p>
+      <p>Timestamp: <%= blog.timestamp %></p>
+      <p>Body: <%= blog.body %></p>
+
+    
+      <% if (blog.state === 'draft') { %>
+        <form method="POST" action="/update-state/<%= blog._id %>/published" style="display: inline;">
+          <button type="submit">Publish</button>
+        </form>
+      <% } %>
+      
+      <form method="GET" action="/edit-blog/<%= blog._id %>" style="display: inline;">
+        <button type="submit">Edit</button>
+      </form>
+
+      <form method="POST" action="/delete-blog/<%= blog._id %>" style="display: inline;">
+        <button type="submit">Delete</button>
+      </form>
+    </li>
+  <% }); %>
+</ul>
+
+<div class="pagination">
+  <% if (currentPage > 1) { %>
+    <a href="/user-blogs?page=<%= currentPage - 1 %>&filterState=<%= filterState %>">Previous</a>
+  <% } %>
+  <% if (currentPage < totalPages) { %>
+    <a href="/user-blogs?page=<%= currentPage + 1 %>&filterState=<%= filterState %>">Next</a>
+  <% } %>
+</div>
+</body>
+</html>

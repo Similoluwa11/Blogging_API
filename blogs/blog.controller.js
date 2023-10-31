@@ -2,66 +2,87 @@ const BlogModel = require('../models/blog.model');
 const logger = require('../logger')
 
 const getAllPublishedBlogs = async (req, res) => {
-    try {
-      
-      const { page = 1, limit = 20, author, title, tags, order } = req.query;
-  
-      const filter = { state: 'published' };
-  
-      if (author) {
-        filter.author = author;
-      }
-  
-      if (title) {
-        filter.title = { $regex: title, $options: 'i' }; 
-      }
-  
-      if (tags) {
-        filter.tags = { $in: tags.split(',') };
-      }
-  
-      const sort = {};
+  try {
+    const searchQuery = req.query.search || ''; 
+    const sortBy = req.query.sort || 'timestamp'; 
+    const page = parseInt(req.query.page, 10) || 1; 
 
-    if (order) {
-      if (order === 'read_count') {
-        sort.read_count = 1;
-      } else if (order === 'reading_time') {
-        sort.reading_time = 1;
-      } else if (order === 'timestamp') {
-        sort.timestamp = 1;
-      }
-    } else {
-      // Default order by timestamp if no order parameter is provided
-      sort.timestamp = 1;
+    const query = {
+      state: 'published',
+    };
+
+    if (searchQuery) {
+      query.$or = [
+        { author: { $regex: searchQuery, $options: 'i' } }, 
+        { title: { $regex: searchQuery, $options: 'i' } },
+        { tags: { $regex: searchQuery, $options: 'i' } },
+      ];
     }
-  
-      const blogs = await BlogModel.find(filter)
-        .sort(sort)
-        .skip((page - 1) * limit)
-        .limit(Number(limit));
-        
-  
-      logger.info(`List of published blogs requested with parameters: ${JSON.stringify(req.query)}`);
-      logger.info(`Response: ${JSON.stringify(blogs)}`);
-  
-      return {
-        code: 200,
-        success: true,
-        message: 'Blogs fetched successfully',
-        data: {
-            blogs
-        }
-    }
-    } catch (error) {
-      logger.error(`Error in fetching list of published blogs: ${error.message}`);
-      res.status(500).json({ message: 'An error occurred while fetching published blogs' });
-    }
+
+    const blogsPerPage = 20;
+    const skipCount = (page - 1) * blogsPerPage;
+
+    let blogs = await BlogModel.find(query)
+      .sort(sortBy)
+      .skip(skipCount)
+      .limit(blogsPerPage);
+
+    res.render('blogs', { blogs, currentPage: page });
+    logger.info(`List of published blogs requested with parameters: ${JSON.stringify(req.query)}`);
+    logger.info(`Response: ${JSON.stringify(blogs)}`);
+  } catch (error) {
+
+  logger.error(`Error in fetching list of published blogs: ${error.message}`);
+    res.status(500).send('Internal Server Error');
   }
+}
+const getUsersBlogs = async (req, res) => {
+  try {
+    const userId = res.locals.user._id;
+
+    const page = parseInt(req.query.page, 10) || 1;
+    const filterState = req.query.filterState || 'all'; 
+
+    
+    const query = { author: userId };
+
+    if (filterState !== 'all') {
+      query.state = filterState;
+    }
+
+    
+    const blogsPerPage = 10; 
+    const skipCount = (page - 1) * blogsPerPage;
+
+    const userBlogs = await BlogModel.find(query)
+      .sort({ timestamp: -1 }) 
+      .skip(skipCount)
+      .limit(blogsPerPage);
+
+    
+    const totalUserBlogs = await BlogModel.countDocuments(query);
+    const totalPages = Math.ceil(totalUserBlogs / blogsPerPage);
+
+    
+    res.render('user-blogs', {
+      userBlogs,
+      currentPage: page,
+      filterState,
+      totalPages,
+    });
+    logger.info(`List of published blogs requested with parameters: ${JSON.stringify(req.query)}`);
+    logger.info(`Response: ${JSON.stringify(userBlogs)}`);
+  } catch (error) {
+   
+    logger.error(`Error in fetching list of published blogs: ${error.message}`);
+    res.status(500).send('Internal Server Error');
+  }
+}
   const createBlog = async (req, res) => {
     try {
 
       const { title, description, tags, body } = req.body;
-      const author = req.user._id; 
+      const author = res.locals.user._id; 
       const wordsPerMinute = 200; 
       const readingTime = calculateReadingTime(body, wordsPerMinute);
   
@@ -77,7 +98,7 @@ const getAllPublishedBlogs = async (req, res) => {
       
       logger.info(`Blog created: ${blog.title} by ${blog.author}`);
   
-      return res.status(201).json(blog);
+      return res.status(201).redirect('user-blogs');
     } catch (error) {
     
       logger.error(`Blog creation failed: ${error.message}`);
@@ -87,7 +108,7 @@ const getAllPublishedBlogs = async (req, res) => {
   const updateBlogState = async (req, res) => {
     try {
       const blogId = req.params.id;
-      const userId = req.user._id;
+      const userId = res.locals.user._id;
   
       const blog = await BlogModel.findById(blogId);
   
@@ -113,7 +134,7 @@ const getAllPublishedBlogs = async (req, res) => {
   const editBlog = async (req, res) => {
     try {
       const blogId = req.params.id;
-      const userId = req.user._id;
+      const userId = res.locals.user._id;
 
       const blog = await BlogModel.findById(blogId);
   
@@ -204,6 +225,7 @@ const getAllPublishedBlogs = async (req, res) => {
   }
   module.exports = {
     getAllPublishedBlogs,
+    getUsersBlogs,
     createBlog,
     updateBlogState,
     getOneBlog,

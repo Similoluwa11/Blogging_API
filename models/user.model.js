@@ -30,8 +30,7 @@ const UserSchema = new mongoose.Schema({
   },
   user_type:
    { type: String,
-    default: 'user' },
-  blogs: [{ type: mongoose.Schema.Types.ObjectId, ref: 'blogs' }]
+    default: 'user' }
   
 });
 

@@ -14,7 +14,7 @@ db.connect();
 
 app.set('view engine', 'ejs')
 app.set("views", "views");
-app.use('/views', viewRouter)
+app.use('/', viewRouter)
 app.use('/users', userRouter)
 app.use('/', blogRouter)
 
