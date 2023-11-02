@@ -1,4 +1,5 @@
 const BlogModel = require('../models/blog.model');
+const UserModel = require('../models/user.model');
 const logger = require('../logger')
 
 const getAllPublishedBlogs = async (req, res) => {
@@ -74,17 +75,20 @@ const getUsersBlogs = async (req, res) => {
     logger.info(`Response: ${JSON.stringify(userBlogs)}`);
   } catch (error) {
    
-    logger.error(`Error in fetching list of published blogs: ${error.message}`);
+    logger.error(`Error in fetching list of your blogs: ${error.message}`);
     res.status(500).send('Internal Server Error');
   }
 }
   const createBlog = async (req, res) => {
     try {
-
+      
       const { title, description, tags, body } = req.body;
       const author = res.locals.user._id; 
       const wordsPerMinute = 200; 
-      const readingTime = calculateReadingTime(body, wordsPerMinute);
+      
+      const words = body.split(" ");
+      const wordsLength = words.length;
+      const readingTime = Math.ceil(wordsLength / wordsPerMinute);
   
       const blog = await BlogModel.create({
         title,
@@ -125,7 +129,7 @@ const getUsersBlogs = async (req, res) => {
   
       logger.info(`Blog "${blog.title}" published by ${userId}`);
   
-      return res.status(200).json(blog);
+      return res.status(200).redirect('user-blogs');
     } catch (error) {
       logger.error(`Failed to publish the blog: ${error.message}`);
       res.status(500).json({ message: 'Failed to publish the blog' });
@@ -155,7 +159,7 @@ const getUsersBlogs = async (req, res) => {
   
       logger.info(`Blog "${blog.title}" edited by ${userId}`);
   
-      return res.status(200).json(blog);
+      return res.status(200).redirect('user-blogs');
     } catch (error) {
       logger.error(`Failed to edit the blog: ${error.message}`);
       res.status(500).json({ message: 'Failed to edit the blog' });
@@ -176,11 +180,11 @@ const getUsersBlogs = async (req, res) => {
         return res.status(403).json({ message: 'Permission denied' });
       }
   
-      await Blog.findByIdAndDelete(blogId);
+      await BlogModel.findByIdAndDelete(blogId);
   
       logger.info(`Blog "${blog.title}" deleted by ${userId}`);
   
-      return res.status(204).end();
+      return res.status(204).redirect('user-blogs');
     } catch (error) {
       logger.error(`Failed to delete the blog: ${error.message}`);
       res.status(500).json({ message: 'Failed to delete the blog' });
@@ -199,14 +203,14 @@ const getUsersBlogs = async (req, res) => {
       blog.read_count += 1;
       await blog.save();
   
-      const author = await User.findById(blog.author);
+      const author = await UserModel.findById(blog.author);
   
       const blogWithAuthor = {
         _id: blog._id,
         title: blog.title,
         description: blog.description,
         tags: blog.tags,
-        author: author,
+        author: author.username,
         timestamp: blog.timestamp,
         state: blog.state,
         read_count: blog.read_count,
@@ -217,7 +221,7 @@ const getUsersBlogs = async (req, res) => {
       logger.info(`Single blog requested: ${blog.title}`);
       logger.info(`Response: ${JSON.stringify(blogWithAuthor)}`);
   
-      return res.status(200).json(blogWithAuthor);
+      return res.status(200).render('blog-details', {blog});
     } catch (error) {
       logger.error(`Failed to fetch the blog: ${error.message}`);
       res.status(500).json({ message: 'Failed to fetch the blog' });

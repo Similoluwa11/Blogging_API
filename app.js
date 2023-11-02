@@ -19,12 +19,8 @@ app.use('/users', userRouter)
 app.use('/', blogRouter)
 
 
-
 app.get('*', (req, res) => {
-    return res.status(404).json({
-        data: null,
-        error: 'Route not found'
-    })
+    return res.status(404).render('pageNotFound')
 })
 
 app.use((err, req, res, next) => {

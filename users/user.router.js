@@ -12,16 +12,20 @@ router.post('/signup', middleware.ValidateUserCreation, async(req,res) =>{
     if (response.code === 200) {
         res.redirect('/login')
     } else{
-        res.json({
-            message: 'User with that email already exists'
-        })
+        res.redirect('/existingUser')
     }
     })
 
 router.post('/login', middleware.LoginValidation, async(req,res) => {
 const response = await controller.Signin({username: req.body.username, password: req.body.password})
 if (response.code === 200) {
-    res.cookie('jwt', response.data.token, {maxAge:60 * 60 * 3000}).redirect('/user-blogs')
+    res.cookie('jwt', response.data.token, {maxAge:60 * 60 * 3000})
+    res.redirect('/user-blogs')
+} else if (response.code === 400) {
+    res.redirect('/userNotFound')
+}
+else {
+    res.redirect('/invalidLoginInfo')
 }
 })
 

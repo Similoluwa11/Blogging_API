@@ -59,12 +59,15 @@
 <body>
     <h1>Your Blogs</h1>
 
-<label for="filterState">Filter by State:</label>
-<select id="filterState" name="filterState">
-  <option value="all">All</option>
-  <option value="draft">Draft</option>
-  <option value="published">Published</option>
-</select>
+    <form method="GET" action="/user-blogs">
+      <label for="filterState">Filter by State:</label>
+      <select id="filterState" name="filterState">
+        <option value="all">All</option>
+        <option value="draft">Draft</option>
+        <option value="published">Published</option>
+      </select>
+      <button type="submit">Filter</button>
+    </form>
 <a href="/create-blog" class="create-button">Create a Blog</a>
 <ul>
   <% userBlogs.forEach(blog => { %>

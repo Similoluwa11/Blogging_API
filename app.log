@@ -25,3 +25,99 @@
 {"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-10-31T15:45:28.503Z"}
 {"level":"info","message":"Response: []","timestamp":"2023-10-31T15:45:28.519Z"}
 {"level":"info","message":"User authenticated: Simi","timestamp":"2023-10-31T15:47:19.616Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-10-31T15:52:48.233Z"}
+{"level":"info","message":"Response: []","timestamp":"2023-10-31T15:52:48.252Z"}
+{"level":"info","message":"User authenticated: Simi","timestamp":"2023-10-31T15:53:44.312Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T10:10:39.683Z"}
+{"level":"info","message":"Response: []","timestamp":"2023-11-02T10:10:39.699Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T10:33:45.676Z"}
+{"level":"info","message":"Response: []","timestamp":"2023-11-02T10:33:45.707Z"}
+{"level":"info","message":"User authenticated: Simi","timestamp":"2023-11-02T10:33:54.136Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T10:49:14.764Z"}
+{"level":"info","message":"Response: []","timestamp":"2023-11-02T10:49:14.802Z"}
+{"level":"info","message":"User authenticated: Simi","timestamp":"2023-11-02T10:49:23.178Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T10:51:17.071Z"}
+{"level":"info","message":"Response: []","timestamp":"2023-11-02T10:51:17.128Z"}
+{"level":"info","message":"User authenticated: Simi","timestamp":"2023-11-02T10:51:26.570Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T10:56:21.618Z"}
+{"level":"info","message":"Response: []","timestamp":"2023-11-02T10:56:21.637Z"}
+{"level":"info","message":"User authenticated: Simi","timestamp":"2023-11-02T10:56:34.436Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T10:59:35.672Z"}
+{"level":"info","message":"Response: []","timestamp":"2023-11-02T10:59:35.701Z"}
+{"level":"info","message":"User authenticated: Simi","timestamp":"2023-11-02T10:59:58.255Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T11:07:44.550Z"}
+{"level":"info","message":"Response: []","timestamp":"2023-11-02T11:07:44.580Z"}
+{"level":"info","message":"User authenticated: Simi","timestamp":"2023-11-02T11:07:52.660Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T11:13:32.029Z"}
+{"level":"info","message":"Response: []","timestamp":"2023-11-02T11:13:32.040Z"}
+{"level":"info","message":"User authenticated: Simi","timestamp":"2023-11-02T11:15:28.481Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T11:43:09.395Z"}
+{"level":"info","message":"Response: []","timestamp":"2023-11-02T11:43:09.410Z"}
+{"level":"info","message":"User authenticated: Simi","timestamp":"2023-11-02T11:43:22.104Z"}
+{"level":"error","message":"Error in fetching list of published blogs: Cannot read properties of undefined (reading '_id')","timestamp":"2023-11-02T11:43:22.134Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T12:16:24.621Z"}
+{"level":"info","message":"Response: []","timestamp":"2023-11-02T12:16:24.640Z"}
+{"level":"info","message":"User authenticated: Simi","timestamp":"2023-11-02T12:22:17.832Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T12:28:19.602Z"}
+{"level":"info","message":"Response: []","timestamp":"2023-11-02T12:28:20.115Z"}
+{"level":"info","message":"User authenticated: Simi","timestamp":"2023-11-02T12:29:55.535Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T12:29:56.257Z"}
+{"level":"info","message":"Response: []","timestamp":"2023-11-02T12:29:56.264Z"}
+{"level":"error","message":"Blog creation failed: Cannot read properties of undefined (reading '_id')","timestamp":"2023-11-02T12:31:05.701Z"}
+{"level":"error","message":"Blog creation failed: calculateReadingTime is not defined","timestamp":"2023-11-02T12:44:00.394Z"}
+{"level":"error","message":"Blog creation failed: calculateReadingTime is not defined","timestamp":"2023-11-02T12:44:11.886Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T13:22:18.255Z"}
+{"level":"info","message":"Response: []","timestamp":"2023-11-02T13:22:18.263Z"}
+{"level":"info","message":"User authenticated: Simi","timestamp":"2023-11-02T13:23:28.653Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T13:23:29.281Z"}
+{"level":"info","message":"Response: []","timestamp":"2023-11-02T13:23:29.284Z"}
+{"level":"error","message":"Blog creation failed: Cannot read properties of undefined (reading 'split')","timestamp":"2023-11-02T13:24:06.479Z"}
+{"level":"info","message":"Blog created: My brand  new blog by 654106b550b852a7e0658751","timestamp":"2023-11-02T13:40:34.433Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T13:40:35.030Z"}
+{"level":"info","message":"Response: [{\"_id\":\"6543a6d23c7c8a5531943f73\",\"title\":\"My brand  new blog\",\"description\":\"New blog\",\"tags\":[\"new\"],\"author\":\"654106b550b852a7e0658751\",\"state\":\"draft\",\"read_count\":0,\"reading_time\":1,\"body\":\"This  is my brand new blog\",\"timestamp\":\"2023-11-02T13:40:34.144Z\",\"__v\":0}]","timestamp":"2023-11-02T13:40:35.036Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T13:43:49.575Z"}
+{"level":"info","message":"Response: [{\"_id\":\"6543a6d23c7c8a5531943f73\",\"title\":\"My brand  new blog\",\"description\":\"New blog\",\"tags\":[\"new\"],\"author\":\"654106b550b852a7e0658751\",\"state\":\"draft\",\"read_count\":0,\"reading_time\":1,\"body\":\"This  is my brand new blog\",\"timestamp\":\"2023-11-02T13:40:34.144Z\",\"__v\":0}]","timestamp":"2023-11-02T13:43:49.703Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T13:53:49.822Z"}
+{"level":"info","message":"Response: [{\"_id\":\"6543a6d23c7c8a5531943f73\",\"title\":\"My brand  new blog\",\"description\":\"New blog\",\"tags\":[\"new\"],\"author\":\"654106b550b852a7e0658751\",\"state\":\"draft\",\"read_count\":0,\"reading_time\":1,\"body\":\"This  is my brand new blog\",\"timestamp\":\"2023-11-02T13:40:34.144Z\",\"__v\":0}]","timestamp":"2023-11-02T13:53:49.893Z"}
+{"level":"info","message":"Blog \"My brand  new blog\" published by 654106b550b852a7e0658751","timestamp":"2023-11-02T13:53:52.658Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T13:57:35.907Z"}
+{"level":"info","message":"Response: [{\"_id\":\"6543a6d23c7c8a5531943f73\",\"title\":\"My brand  new blog\",\"description\":\"New blog\",\"tags\":[\"new\"],\"author\":\"654106b550b852a7e0658751\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This  is my brand new blog\",\"timestamp\":\"2023-11-02T13:40:34.144Z\",\"__v\":0}]","timestamp":"2023-11-02T13:57:36.003Z"}
+{"level":"info","message":"User registered: Larin","timestamp":"2023-11-02T13:58:55.653Z"}
+{"level":"info","message":"User authenticated: Larin","timestamp":"2023-11-02T13:59:10.637Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T13:59:11.131Z"}
+{"level":"info","message":"Response: []","timestamp":"2023-11-02T13:59:11.133Z"}
+{"level":"info","message":"Blog created: My own blog by 6543aaa410f664ded478032e","timestamp":"2023-11-02T13:59:49.849Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T13:59:50.330Z"}
+{"level":"info","message":"Response: [{\"_id\":\"6543ab5510f664ded4780337\",\"title\":\"My own blog\",\"description\":\"My blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"draft\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is  my own blog\",\"timestamp\":\"2023-11-02T13:59:49.624Z\",\"__v\":0}]","timestamp":"2023-11-02T13:59:50.332Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T14:01:31.224Z"}
+{"level":"info","message":"Response: [{\"_id\":\"6543ab5510f664ded4780337\",\"title\":\"My own blog\",\"description\":\"My blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"draft\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is  my own blog\",\"timestamp\":\"2023-11-02T13:59:49.624Z\",\"__v\":0}]","timestamp":"2023-11-02T14:01:31.372Z"}
+{"level":"info","message":"Blog \"My own blog\" published by 6543aaa410f664ded478032e","timestamp":"2023-11-02T14:01:34.821Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T14:02:08.095Z"}
+{"level":"info","message":"Response: [{\"_id\":\"6543ab5510f664ded4780337\",\"title\":\"My own blog\",\"description\":\"My blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is  my own blog\",\"timestamp\":\"2023-11-02T13:59:49.624Z\",\"__v\":0}]","timestamp":"2023-11-02T14:02:08.102Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T14:40:13.509Z"}
+{"level":"info","message":"Response: [{\"_id\":\"6543ab5510f664ded4780337\",\"title\":\"My own blog\",\"description\":\"My blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is  my own blog\",\"timestamp\":\"2023-11-02T13:59:49.624Z\",\"__v\":0}]","timestamp":"2023-11-02T14:40:13.568Z"}
+{"level":"info","message":"Blog created: Another Blog by 6543aaa410f664ded478032e","timestamp":"2023-11-02T14:41:22.335Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T14:41:22.841Z"}
+{"level":"info","message":"Response: [{\"_id\":\"6543b512b5633da9ef3490f8\",\"title\":\"Another Blog\",\"description\":\"still my blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"draft\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is another blog that is stiill mine\",\"timestamp\":\"2023-11-02T14:41:22.059Z\",\"__v\":0},{\"_id\":\"6543ab5510f664ded4780337\",\"title\":\"My own blog\",\"description\":\"My blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is  my own blog\",\"timestamp\":\"2023-11-02T13:59:49.624Z\",\"__v\":0}]","timestamp":"2023-11-02T14:41:22.845Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T14:41:38.116Z"}
+{"level":"info","message":"Response: [{\"_id\":\"6543b512b5633da9ef3490f8\",\"title\":\"Another Blog\",\"description\":\"still my blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"draft\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is another blog that is stiill mine\",\"timestamp\":\"2023-11-02T14:41:22.059Z\",\"__v\":0},{\"_id\":\"6543ab5510f664ded4780337\",\"title\":\"My own blog\",\"description\":\"My blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is  my own blog\",\"timestamp\":\"2023-11-02T13:59:49.624Z\",\"__v\":0}]","timestamp":"2023-11-02T14:41:38.120Z"}
+{"level":"info","message":"Blog \"Another Blog\" published by 6543aaa410f664ded478032e","timestamp":"2023-11-02T14:41:52.048Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T14:42:07.365Z"}
+{"level":"info","message":"Response: [{\"_id\":\"6543b512b5633da9ef3490f8\",\"title\":\"Another Blog\",\"description\":\"still my blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is another blog that is stiill mine\",\"timestamp\":\"2023-11-02T14:41:22.059Z\",\"__v\":0},{\"_id\":\"6543ab5510f664ded4780337\",\"title\":\"My own blog\",\"description\":\"My blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is  my own blog\",\"timestamp\":\"2023-11-02T13:59:49.624Z\",\"__v\":0}]","timestamp":"2023-11-02T14:42:07.370Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T14:54:33.346Z"}
+{"level":"info","message":"Response: [{\"_id\":\"6543a6d23c7c8a5531943f73\",\"title\":\"My brand  new blog\",\"description\":\"New blog\",\"tags\":[\"new\"],\"author\":\"654106b550b852a7e0658751\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This  is my brand new blog\",\"timestamp\":\"2023-11-02T13:40:34.144Z\",\"__v\":0},{\"_id\":\"6543ab5510f664ded4780337\",\"title\":\"My own blog\",\"description\":\"My blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is  my own blog\",\"timestamp\":\"2023-11-02T13:59:49.624Z\",\"__v\":0},{\"_id\":\"6543b512b5633da9ef3490f8\",\"title\":\"Another Blog\",\"description\":\"still my blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is another blog that is stiill mine\",\"timestamp\":\"2023-11-02T14:41:22.059Z\",\"__v\":0}]","timestamp":"2023-11-02T14:54:33.357Z"}
+{"level":"info","message":"User authenticated: Larin","timestamp":"2023-11-02T14:55:05.792Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T14:55:06.383Z"}
+{"level":"info","message":"Response: [{\"_id\":\"6543b512b5633da9ef3490f8\",\"title\":\"Another Blog\",\"description\":\"still my blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is another blog that is stiill mine\",\"timestamp\":\"2023-11-02T14:41:22.059Z\",\"__v\":0},{\"_id\":\"6543ab5510f664ded4780337\",\"title\":\"My own blog\",\"description\":\"My blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is  my own blog\",\"timestamp\":\"2023-11-02T13:59:49.624Z\",\"__v\":0}]","timestamp":"2023-11-02T14:55:06.392Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T14:59:06.627Z"}
+{"level":"info","message":"Response: [{\"_id\":\"6543b512b5633da9ef3490f8\",\"title\":\"Another Blog\",\"description\":\"still my blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is another blog that is stiill mine\",\"timestamp\":\"2023-11-02T14:41:22.059Z\",\"__v\":0},{\"_id\":\"6543ab5510f664ded4780337\",\"title\":\"My own blog\",\"description\":\"My blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is  my own blog\",\"timestamp\":\"2023-11-02T13:59:49.624Z\",\"__v\":0}]","timestamp":"2023-11-02T14:59:06.770Z"}
+{"level":"error","message":"Failed to edit the blog: blogs validation failed: title: Path `title` is required., body: Path `body` is required.","timestamp":"2023-11-02T14:59:10.958Z"}
+{"level":"error","message":"Failed to delete the blog: Blog is not defined","timestamp":"2023-11-02T14:59:17.001Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T15:22:48.704Z"}
+{"level":"info","message":"Response: [{\"_id\":\"6543a6d23c7c8a5531943f73\",\"title\":\"My brand  new blog\",\"description\":\"New blog\",\"tags\":[\"new\"],\"author\":\"654106b550b852a7e0658751\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This  is my brand new blog\",\"timestamp\":\"2023-11-02T13:40:34.144Z\",\"__v\":0},{\"_id\":\"6543ab5510f664ded4780337\",\"title\":\"My own blog\",\"description\":\"My blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is  my own blog\",\"timestamp\":\"2023-11-02T13:59:49.624Z\",\"__v\":0},{\"_id\":\"6543b512b5633da9ef3490f8\",\"title\":\"Another Blog\",\"description\":\"still my blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is another blog that is stiill mine\",\"timestamp\":\"2023-11-02T14:41:22.059Z\",\"__v\":0}]","timestamp":"2023-11-02T15:22:48.717Z"}
+{"level":"info","message":"Single blog requested: My brand  new blog","timestamp":"2023-11-02T15:23:00.527Z"}
+{"level":"info","message":"Response: {\"_id\":\"6543a6d23c7c8a5531943f73\",\"title\":\"My brand  new blog\",\"description\":\"New blog\",\"tags\":[\"new\"],\"author\":{\"_id\":\"654106b550b852a7e0658751\",\"created_at\":\"2023-10-31T13:52:53.908Z\",\"username\":\"Simi\",\"firstname\":\"Similoluwa\",\"lastname\":\"Akhigbe\",\"email\":\"akhigbesimiloluwa@gmail.com\",\"password\":\"$2a$10$9iI/khsiJkyNy3QsRtHGR./FNbvFkO42DD1ZZuMe9XzJu2r3qKRye\",\"user_type\":\"user\",\"__v\":0},\"timestamp\":\"2023-11-02T13:40:34.144Z\",\"state\":\"published\",\"read_count\":1,\"reading_time\":1,\"body\":\"This  is my brand new blog\"}","timestamp":"2023-11-02T15:23:00.530Z"}
+{"level":"info","message":"List of published blogs requested with parameters: {}","timestamp":"2023-11-02T15:35:55.783Z"}
+{"level":"info","message":"Response: [{\"_id\":\"6543a6d23c7c8a5531943f73\",\"title\":\"My brand  new blog\",\"description\":\"New blog\",\"tags\":[\"new\"],\"author\":\"654106b550b852a7e0658751\",\"state\":\"published\",\"read_count\":1,\"reading_time\":1,\"body\":\"This  is my brand new blog\",\"timestamp\":\"2023-11-02T13:40:34.144Z\",\"__v\":0},{\"_id\":\"6543ab5510f664ded4780337\",\"title\":\"My own blog\",\"description\":\"My blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is  my own blog\",\"timestamp\":\"2023-11-02T13:59:49.624Z\",\"__v\":0},{\"_id\":\"6543b512b5633da9ef3490f8\",\"title\":\"Another Blog\",\"description\":\"still my blog\",\"tags\":[\"mine\"],\"author\":\"6543aaa410f664ded478032e\",\"state\":\"published\",\"read_count\":0,\"reading_time\":1,\"body\":\"This is another blog that is stiill mine\",\"timestamp\":\"2023-11-02T14:41:22.059Z\",\"__v\":0}]","timestamp":"2023-11-02T15:35:55.892Z"}
+{"level":"info","message":"Single blog requested: Another Blog","timestamp":"2023-11-02T15:36:03.120Z"}
+{"level":"info","message":"Response: {\"_id\":\"6543b512b5633da9ef3490f8\",\"title\":\"Another Blog\",\"description\":\"still my blog\",\"tags\":[\"mine\"],\"author\":{\"_id\":\"6543aaa410f664ded478032e\",\"created_at\":\"2023-11-02T13:56:52.303Z\",\"username\":\"Larin\",\"firstname\":\"Olarinsade\",\"lastname\":\"Owolabi\",\"email\":\"owolabiolarinsade@gmail.com\",\"password\":\"$2a$10$IMJwopx/UUuJdKlwRN7x/e9wOuaDLiZIiMs95Ut4obV6MfKZavN.G\",\"user_type\":\"user\",\"__v\":0},\"timestamp\":\"2023-11-02T14:41:22.059Z\",\"state\":\"published\",\"read_count\":1,\"reading_time\":1,\"body\":\"This is another blog that is stiill mine\"}","timestamp":"2023-11-02T15:36:03.123Z"}
